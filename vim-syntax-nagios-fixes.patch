@@ -17,3 +17,25 @@
  
  hi link nagiosComment Comment
  hi link nagiosConstant Number
+--- nagios.vim	2005-03-06 23:39:00.621293214 +0200
++++ ./nagios.vim	2005-03-06 23:35:52.269462702 +0200
+@@ -40,15 +40,16 @@
+ syn match nagiosDef 'define[ \t]\+\(service\|host\|hostgroup\)escalation'
+ 
+ syn match nagiosMacro  '\$CONTACT\(NAME\|ALIAS\|EMAIL\|PAGER\)\$'
+-syn match nagiosMacro  '\$HOST\(NAME\|ALIAS\|ADDRESS\|STATE\)\$'
++syn match nagiosMacro  '\$HOST\(NAME\|ALIAS\|ADDRESS\|STATE\|OUTPUT\|PERFDATA\|STATETYPE\|EXECUTIONTIME\)\$'
+ syn match nagiosMacro  '\$\(ARG\|USER\)\([1-9]\|[1-2][0-9]\|3[0-2]\)\$'
+-syn match nagiosMacro  '\$SERVICE\(DESC\|STATE\)\$'
++syn match nagiosMacro  '\$SERVICE\(DESC\|STATE\|OUTPUT\|PERFDATA\|LATENCY\|EXECUTIONTIME\|STATETYPE\)\$'
+ syn match nagiosMacro  '\$\(OUTPUT\|PERFDATA\|EXECUTIONTIME\|LATENCY\)\$'
+ syn match nagiosMacro  '\$NOTIFICATION\(TYPE\|NUMBER\)\$'
+-syn match nagiosMacro  '\$\(\(SHORT\)\?DATETIME\|DATE\|TIME\|TIMET\)\$'
++syn match nagiosMacro  '\$\(\(SHORT\|LONG\)\?DATETIME\|DATE\|TIME\|TIMET\)\$'
+ syn match nagiosMacro  '\$\(LASTSTATECHANGE\|STATETYPE\)\$'
+ syn match nagiosMacro  '\$ADMIN\(EMAIL\|PAGER\)\$'
+ syn match nagiosMacro  '\$\(SERVICE\|HOST\)ATTEMPT\$'
++syn match nagiosMacro  '\$LAST\(HOST\|SERVICE\)CHECK\$'
+ 
+ syn region nagiosDefBody start='{' end='}' contains=nagiosDirective,nagiosMacro,nagiosConstant,nagiosString,nagiosSpecial transparent
+ 
