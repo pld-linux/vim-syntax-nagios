@@ -5,7 +5,7 @@ Summary:	Vim plugin: Nagios configuration files syntax
 Summary(pl):	Wtyczka Vima: pod¶wietlanie sk³adni dla plików konfiguracyjnych Nagiosa
 Name:		vim-syntax-nagios
 Version:	20050105
-Release:	1
+Release:	2
 License:	as-is
 Group:		Applications/Editors/Vim
 Source0:	http://dev.gentoo.org/~ramereth/vim/syntax/nagios.vim
