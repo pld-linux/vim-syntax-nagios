@@ -1,0 +1,19 @@
+--- ../SOURCES/nagios.vim	2005-01-05 05:05:15.000000000 +0200
++++ ./nagios.vim	2005-01-28 20:49:49.000000000 +0200
+@@ -34,7 +34,7 @@
+ 
+ syn keyword nagiosSpecial  name register use
+ 
+-syn match nagiosDef 'define[ \t]\+\(host\|service\|timeperiod\|contact\|command\)'
++syn match nagiosDef 'define[ \t]\+\(hostextinfo\|host\|service\|timeperiod\|contact\|command\)'
+ syn match nagiosDef 'define[ \t]\+\(host\|contact\)group'
+ syn match nagiosDef 'define[ \t]\+\(service\|host\)dependency'
+ syn match nagiosDef 'define[ \t]\+\(service\|host\|hostgroup\)escalation'
+@@ -79,6 +79,7 @@
+ syn keyword nagiosDirective  service_notification_options
+ syn keyword nagiosDirective  service_notification_period stalking_options
+ syn keyword nagiosDirective  sunday thursday timeperiod_name tuesday wednesday
++syn keyword nagiosDirective  icon_image icon_image_alt vrml_image statusmap_image
+ 
+ hi link nagiosComment Comment
+ hi link nagiosConstant Number
