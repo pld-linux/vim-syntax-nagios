@@ -2,6 +2,7 @@
 %define		_vimdatadir	%{_datadir}/vim/vimfiles
 
 Summary:	Vim plugin: Nagios configuration files syntax
+Summary(pl):	Wtyczka Vima: pod¶wietlanie sk³adni dla plików konfiguracyjnych Nagiosa
 Name:		vim-syntax-nagios
 Version:	20050105
 Release:	0.6
@@ -18,6 +19,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This plugin provides syntax highlighting for Nagios configuration
 files. Detection is by filename (/etc/nagios/).
+
+%description -l pl
+Ta wtyczka dostarcza pod¶wietlanie sk³adni dla plików konfiguracyjnych
+Nagiosa. Pliki s± rozpoznawane po nazwie (/etc/nagios/).
 
 %prep
 %setup -q -c -T
