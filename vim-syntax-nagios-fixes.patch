@@ -49,3 +49,14 @@
  
  hi link nagiosComment Comment
  hi link nagiosConstant Number
+--- ./nagios.vim~	2005-05-03 14:59:40.000000000 +0300
++++ ./nagios.vim	2005-05-03 14:59:54.000000000 +0300
+@@ -60,7 +60,7 @@
+ syn keyword nagiosDirective  dependent_host_name dependent_service_description
+ syn keyword nagiosDirective  email event_handler event_handler_enabled
+ syn keyword nagiosDirective  execution_failure_criteria first_notification
+-syn keyword nagiosDirective  flap_detection_enabled freshness_threshold
++syn keyword nagiosDirective  flap_detection_enabled freshness_threshold failure_prediction_enabled
+ syn keyword nagiosDirective  friday high_flap_threshold host_name
+ syn keyword nagiosDirective  host_notification_commands
+ syn keyword nagiosDirective  host_notification_options
