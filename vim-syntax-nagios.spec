@@ -5,7 +5,7 @@ Summary:	Vim plugin: Nagios configuration files syntax
 Summary(pl):	Wtyczka Vima: pod¶wietlanie sk³adni dla plików konfiguracyjnych Nagiosa
 Name:		vim-syntax-nagios
 Version:	20050105
-Release:	6
+Release:	7
 License:	as-is
 Group:		Applications/Editors/Vim
 Source0:	http://dev.gentoo.org/~ramereth/vim/syntax/nagios.vim
@@ -37,7 +37,7 @@ install -d $RPM_BUILD_ROOT%{_vimdatadir}/{syntax,plugin,ftplugin,ftdetect}
 install nagios.vim $RPM_BUILD_ROOT%{_vimdatadir}/syntax
 
 cat > $RPM_BUILD_ROOT%{_vimdatadir}/ftdetect/%{name}.vim <<-EOF
-au BufNewFile,BufRead /*etc/nagios/*.cfg,*sample-config/template-object/*.cfg{,.in} set filetype=nagios
+au BufNewFile,BufRead /*etc/nagios/*.cfg,*sample-config/template-object/*.cfg{,.in},/var/lib/nagios/objects.cache set filetype=nagios
 EOF
 
 %clean
