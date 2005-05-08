@@ -60,3 +60,14 @@
  syn keyword nagiosDirective  friday high_flap_threshold host_name
  syn keyword nagiosDirective  host_notification_commands
  syn keyword nagiosDirective  host_notification_options
+--- ./nagios.vim~	2005-05-08 18:43:36.000000000 +0300
++++ ./nagios.vim	2005-05-08 18:43:37.000000000 +0300
+@@ -34,7 +34,7 @@
+ 
+ syn keyword nagiosSpecial  name register use
+ 
+-syn match nagiosDef 'define[ \t]\+\(hostextinfo\|host\|service\|timeperiod\|contact\|command\)'
++syn match nagiosDef 'define[ \t]\+\(\(host\|service\)extinfo\|host\|service\|timeperiod\|contact\|command\)'
+ syn match nagiosDef 'define[ \t]\+\(host\|contact\)group'
+ syn match nagiosDef 'define[ \t]\+\(service\|host\)dependency'
+ syn match nagiosDef 'define[ \t]\+\(service\|host\|hostgroup\)escalation'
