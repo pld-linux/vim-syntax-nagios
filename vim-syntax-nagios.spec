@@ -33,7 +33,7 @@ install %{SOURCE0} .
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_vimdatadir}/{syntax,plugin,ftplugin,ftdetect}
+install -d $RPM_BUILD_ROOT%{_vimdatadir}/{syntax,ftdetect}
 install nagios.vim $RPM_BUILD_ROOT%{_vimdatadir}/syntax
 
 cat > $RPM_BUILD_ROOT%{_vimdatadir}/ftdetect/%{name}.vim <<-EOF
