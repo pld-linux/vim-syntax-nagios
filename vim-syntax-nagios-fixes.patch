@@ -106,3 +106,14 @@
  
  hi link nagiosComment Comment
  hi link nagiosConstant Number
+--- ./nagios.vim~	2005-07-18 18:03:53.000000000 +0300
++++ ./nagios.vim	2005-07-18 18:04:35.000000000 +0300
+@@ -35,7 +35,7 @@
+ syn keyword nagiosSpecial  name register use
+ 
+ syn match nagiosDef 'define[ \t]\+\(\(host\|service\)extinfo\|host\|service\|timeperiod\|contact\|command\)'
+-syn match nagiosDef 'define[ \t]\+\(host\|contact\)group'
++syn match nagiosDef 'define[ \t]\+\(host\|contact\|service\)group'
+ syn match nagiosDef 'define[ \t]\+\(service\|host\)dependency'
+ syn match nagiosDef 'define[ \t]\+\(service\|host\|hostgroup\)escalation'
+ 
