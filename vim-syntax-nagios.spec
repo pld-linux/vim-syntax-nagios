@@ -5,7 +5,7 @@ Summary:	Vim syntax: Nagios configuration files syntax
 Summary(pl):	Opis sk³adni dla Vima: pod¶wietlanie sk³adni dla plików konfiguracyjnych Nagiosa
 Name:		vim-syntax-nagios
 Version:	20050105
-Release:	8
+Release:	9
 License:	as-is
 Group:		Applications/Editors/Vim
 Source0:	nagios.vim
