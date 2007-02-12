@@ -2,7 +2,7 @@
 %define		_vimdatadir	%{_datadir}/vim/vimfiles
 
 Summary:	Vim syntax: Nagios configuration files syntax
-Summary(pl.UTF-8):   Opis składni dla Vima: podświetlanie składni dla plików konfiguracyjnych Nagiosa
+Summary(pl.UTF-8):	Opis składni dla Vima: podświetlanie składni dla plików konfiguracyjnych Nagiosa
 Name:		vim-syntax-nagios
 Version:	20050105
 Release:	9
