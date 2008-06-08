@@ -1,8 +1,9 @@
 Summary:	Vim syntax: Nagios configuration files syntax
 Summary(pl.UTF-8):	Opis składni dla Vima: podświetlanie składni dla plików konfiguracyjnych Nagiosa
 Name:		vim-syntax-nagios
-Version:	20050105
-Release:	10
+Version:	1.5
+Release:	1
+Epoch:		1
 License:	as-is
 Group:		Applications/Editors/Vim
 Source0:	nagios.vim
@@ -24,6 +25,11 @@ Ta wtyczka dostarcza podświetlanie składni dla plików konfiguracyjnych
 Nagiosa. Pliki są rozpoznawane po nazwie (/etc/nagios).
 
 %prep
+rev=$(awk '/^".*Revision:/{print $5}' %{SOURCE0})
+if [ "$rev" != "%{version}" ]; then
+	: Update version $rev, and retry
+	exit 1
+fi
 
 %install
 rm -rf $RPM_BUILD_ROOT
