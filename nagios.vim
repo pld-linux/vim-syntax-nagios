@@ -83,6 +83,8 @@ syn keyword nagiosDirective contained sunday thursday timeperiod_name tuesday we
 syn keyword nagiosDirective contained icon_image icon_image_alt vrml_image statusmap_image
 syn keyword nagiosDirective contained notes notes_url 2d_coords 3d_coords obsess_over_host inherits_parent
 
+syn keyword nagiosSpecial null
+
 hi link nagiosComment Comment
 hi link nagiosLineComment Comment
 hi link nagiosConstant Number
