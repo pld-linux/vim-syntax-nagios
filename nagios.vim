@@ -1,10 +1,10 @@
 " Vim syntax file
 " Filename:     nagios.vim
 " Language:     Nagios template object configuration file
-" Maintainer:   Elan Ruusamäe <glen@pld-linux.org>
-" Author:       Lance Albertson <ramereth@gentoo.org>
 " Author:       Ava Arachne Jarvis <ajar@katanalynx.dyndns.org>
-" URL:          http://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/SOURCES/nagios.vim
+" Author:       Lance Albertson <ramereth@gentoo.org>
+" Maintainer:   Elan Ruusamäe <glen@pld-linux.org>
+" URL:          http://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/packages/vim-syntax-nagios/nagios.vim
 " Version Info: $Revision$
 " Last Change:  $Date$ UTC
 
