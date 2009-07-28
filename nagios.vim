@@ -23,7 +23,7 @@ if version >= 600
 else
 endif
 
-syn match nagiosLineComment '#.*'
+syn match nagiosLineComment '^[\s]*#.*'
 syn match nagiosComment ';.*$' contained
 
 syn match nagiosConstant '\<[0-9]\+%\?\>'
@@ -50,7 +50,7 @@ syn match nagiosMacro  '\$\(SERVICE\|HOST\)ATTEMPT\$'
 syn match nagiosMacro  '\$LAST\(HOST\|SERVICE\)CHECK\$'
 
 syn region nagiosDefBody start='{' end='}'
-	\ contains=nagiosComment,nagiosDirective,nagiosMacro,nagiosConstant,nagiosString,nagiosSpecial transparent
+	\ contains=nagiosComment,nagiosLineComment,nagiosDirective,nagiosMacro,nagiosConstant,nagiosString,nagiosSpecial transparent
 
 syn keyword nagiosDirective contained name register use
 syn keyword nagiosDirective contained active_checks_enabled address alias check_command
@@ -64,7 +64,7 @@ syn keyword nagiosDirective contained flap_detection_enabled freshness_threshold
 syn keyword nagiosDirective contained friday high_flap_threshold host_name
 syn keyword nagiosDirective contained host_notification_commands
 syn keyword nagiosDirective contained host_notification_options
-syn keyword nagiosDirective contained host_notification_period hostgroup_name servicegroup_name hostgroups servicegroups
+syn keyword nagiosDirective contained host_notification_period hostgroup_name servicegroup_name servicegroup_members hostgroups servicegroups
 syn keyword nagiosDirective contained is_volatile last_notification
 syn keyword nagiosDirective contained low_flap_threshold max_check_attempts
 syn keyword nagiosDirective contained members monday normal_check_interval
@@ -81,7 +81,7 @@ syn keyword nagiosDirective contained service_notification_options
 syn keyword nagiosDirective contained service_notification_period stalking_options
 syn keyword nagiosDirective contained sunday thursday timeperiod_name tuesday wednesday
 syn keyword nagiosDirective contained icon_image icon_image_alt vrml_image statusmap_image
-syn keyword nagiosDirective contained notes notes_url 2d_coords 3d_coords obsess_over_host inherits_parent
+syn keyword nagiosDirective contained notes notes_url action_url 2d_coords 3d_coords obsess_over_host inherits_parent
 
 syn keyword nagiosSpecial null
 
