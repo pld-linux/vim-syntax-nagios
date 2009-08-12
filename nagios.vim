@@ -83,6 +83,9 @@ syn keyword nagiosDirective contained sunday thursday timeperiod_name tuesday we
 syn keyword nagiosDirective contained icon_image icon_image_alt vrml_image statusmap_image
 syn keyword nagiosDirective contained notes notes_url action_url 2d_coords 3d_coords obsess_over_host inherits_parent
 
+" custom objects: http://nagios.sourceforge.net/docs/3_0/customobjectvars.html
+syn match nagiosDirective contained '\<_[a-z]\+\>'
+
 syn keyword nagiosSpecial null
 
 hi link nagiosComment Comment
