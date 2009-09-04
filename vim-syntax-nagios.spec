@@ -8,7 +8,7 @@ License:	as-is
 Group:		Applications/Editors/Vim
 Source0:	nagios.vim
 URL:		http://bugs.gentoo.org/show_bug.cgi?id=76712
-Requires:	vim-rt >= 7.2.239-3
+Requires:	vim-rt >= 4:7.2.239-3
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
