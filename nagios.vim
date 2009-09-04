@@ -85,7 +85,7 @@ syn keyword nagiosDirective contained notes notes_url action_url 2d_coords 3d_co
 
 " custom objects: http://nagios.sourceforge.net/docs/3_0/customobjectvars.html
 syn match nagiosDirective contained '\<_[a-z_]\+\>'
-syn match nagiosMacro contained '\$_[A-Z_]\+\$'
+syn match nagiosMacro contained '\$_\(HOST\|SERVICE\|CONTACT\)[A-Z_]\+\$'
 
 syn keyword nagiosSpecial null
 
