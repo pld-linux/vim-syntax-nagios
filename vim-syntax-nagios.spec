@@ -1,15 +1,14 @@
 Summary:	Vim syntax: Nagios configuration files syntax
 Summary(pl.UTF-8):	Opis składni dla Vima: podświetlanie składni dla plików konfiguracyjnych Nagiosa
 Name:		vim-syntax-nagios
-Version:	1.5
+Version:	1.17
 Release:	1
 Epoch:		1
 License:	as-is
 Group:		Applications/Editors/Vim
 Source0:	nagios.vim
 URL:		http://bugs.gentoo.org/show_bug.cgi?id=76712
-# for _vimdatadir existence
-Requires:	vim-rt >= 4:6.3.058-3
+Requires:	vim-rt >= 7.2.239-3
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
