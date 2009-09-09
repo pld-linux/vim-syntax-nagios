@@ -37,7 +37,7 @@ install -d $RPM_BUILD_ROOT%{_vimdatadir}/{syntax,ftdetect}
 install %{SOURCE0} $RPM_BUILD_ROOT%{_vimdatadir}/syntax
 
 cat > $RPM_BUILD_ROOT%{_vimdatadir}/ftdetect/%{syntax}.vim <<-EOF
-au BufNewFile,BufRead /*etc/nagios/*.cfg,*sample-config/template-object/*.cfg{,.in},/var/lib/nagios/objects.cache set filetype=%{syntax}
+au BufNewFile,BufRead /*etc/nagios/*.cfg,*sample-config/template-object/*.cfg{,.in},*/packages/nagios-plugin*/*.cfg,/var/lib/nagios/objects.cache set filetype=%{syntax}
 EOF
 
 %clean
