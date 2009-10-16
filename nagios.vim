@@ -82,6 +82,7 @@ syn keyword nagiosDirective contained service_notification_period stalking_optio
 syn keyword nagiosDirective contained sunday thursday timeperiod_name tuesday wednesday
 syn keyword nagiosDirective contained icon_image icon_image_alt vrml_image statusmap_image
 syn keyword nagiosDirective contained notes notes_url action_url 2d_coords 3d_coords obsess_over_host inherits_parent
+syn keyword nagiosDirective contained escalation_period escalation_options
 
 " custom objects: http://nagios.sourceforge.net/docs/3_0/customobjectvars.html
 syn match nagiosDirective contained '\<_[a-z_]\+\>'
