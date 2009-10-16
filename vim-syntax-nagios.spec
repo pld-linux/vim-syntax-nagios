@@ -1,7 +1,7 @@
 Summary:	Vim syntax: Nagios configuration files syntax
 Summary(pl.UTF-8):	Opis składni dla Vima: podświetlanie składni dla plików konfiguracyjnych Nagiosa
 Name:		vim-syntax-nagios
-Version:	1.17
+Version:	1.20
 Release:	1
 Epoch:		1
 License:	as-is
@@ -13,7 +13,7 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_vimdatadir	%{_datadir}/vim/vimfiles
-%define		syntax nagios
+%define		syntax		nagios
 
 %description
 This plugin provides syntax highlighting for Nagios configuration
@@ -24,6 +24,8 @@ Ta wtyczka dostarcza podświetlanie składni dla plików konfiguracyjnych
 Nagiosa. Pliki są rozpoznawane po nazwie (/etc/nagios).
 
 %prep
+
+%build
 rev=$(awk '/^".*Revision:/{print $5}' %{SOURCE0})
 if [ "$rev" != "%{version}" ]; then
 	: Update version $rev, and retry
@@ -32,12 +34,11 @@ fi
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_vimdatadir}/{syntax,ftdetect}
-install %{SOURCE0} $RPM_BUILD_ROOT%{_vimdatadir}/syntax
+cp -a %{SOURCE0} $RPM_BUILD_ROOT%{_vimdatadir}/syntax
 
 cat > $RPM_BUILD_ROOT%{_vimdatadir}/ftdetect/%{syntax}.vim <<-EOF
-au BufNewFile,BufRead /*etc/nagios/*.cfg,*sample-config/template-object/*.cfg{,.in},*/packages/nagios-plugin*/*.cfg,/var/lib/nagios/objects.cache set filetype=%{syntax}
+au BufNewFile,BufRead /*etc/nagios/*.cfg,*sample-config/template-object/*.cfg{,.in},*/packages/nagios-plugin*/*.cfg,/var/lib/nagios/objects.*cache set filetype=%{syntax}
 EOF
 
 %clean
@@ -45,5 +46,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{_vimdatadir}/syntax/*
-%{_vimdatadir}/ftdetect/*
+%{_vimdatadir}/syntax/%{syntax}.vim
+%{_vimdatadir}/ftdetect/%{syntax}.vim
